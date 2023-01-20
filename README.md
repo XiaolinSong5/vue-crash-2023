@@ -1,4 +1,4 @@
-# vue-crash-2023
+# vue-crash-2023 from hobby
 
 ## Project setup
 ```
