@@ -1,7 +1,7 @@
 <template>
   <div class="container">
   <h1>Hello world</h1>
-    <Header title="Task tracker"/>
+    <Header/>
   </div>
 </template>
 
@@ -10,7 +10,7 @@ import Header from "@/components/Header.vue";
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
   }
 }
 </script>
