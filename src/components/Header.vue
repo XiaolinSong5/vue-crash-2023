@@ -2,8 +2,6 @@
   <header>
     <h1>{{title}}</h1>
     <Button text="Add task" color="green"/>
-    <Button text="Update task" color="blue"/>
-    <Button text="Delete task" color="red"/>
   </header>
 </template>
 <script>
@@ -13,8 +11,7 @@ export default {
   name: 'Header',
   props: {
     title: {
-      type: String,
-      default: 'Hello World'
+      type: String
     }
   },
   components: {
