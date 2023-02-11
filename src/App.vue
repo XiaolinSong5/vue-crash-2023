@@ -31,6 +31,11 @@ export default {
         text: 'Meeting at school',
         day: '01-03 14:00',
         reminder: true
+      },
+      {id: 3,
+        text: 'Food Shopping',
+        day: '03-03 11:00',
+        reminder: false
       }
     ];
   }

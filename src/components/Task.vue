@@ -1,5 +1,5 @@
 <template>
-  <div class="task">
+  <div :class="[task.reminder ? 'reminder' : '', 'task']">
     <h3>{{task.text}}</h3>
     <p>{{task.day}}</p>
   </div>
@@ -21,6 +21,9 @@ export default {
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
+}
+.task.reminder{
+  border-left: 5px solid green;
 }
 h3 {
   margin: 40px 0 0;
