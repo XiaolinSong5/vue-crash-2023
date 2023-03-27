@@ -49,27 +49,32 @@ export default {
             ...task, reminder: !task.reminder
           } : task
       )
-
+    },
+    async fetchTasks() {
+      const res = await fetch('http://localhost:3000/tasks');
+      const data = await  res.json();
+      return data;
     }
   },
-  created() {
-    this.tasks = [
-      {id: 1,
-        text: 'Doctors appointment',
-        day: '01-02 14:00',
-        reminder: true
-      },
-      {id: 2,
-        text: 'Meeting at school',
-        day: '01-03 14:00',
-        reminder: true
-      },
-      {id: 3,
-        text: 'Food Shopping',
-        day: '03-03 11:00',
-        reminder: false
-      }
-    ];
+  async created() {
+    this.tasks = await this.fetchTasks();
+    // this.tasks = [
+    //   {id: 1,
+    //     text: 'Doctors appointment',
+    //     day: '01-02 14:00',
+    //     reminder: true
+    //   },
+    //   {id: 2,
+    //     text: 'Meeting at school',
+    //     day: '01-03 14:00',
+    //     reminder: true
+    //   },
+    //   {id: 3,
+    //     text: 'Food Shopping',
+    //     day: '03-03 11:00',
+    //     reminder: false
+    //   }
+    // ];
   }
 }
 </script>
